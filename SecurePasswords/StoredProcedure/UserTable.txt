@@ -1,0 +1,14 @@
+﻿drop table if exists UserTable;
+create table UserTable(
+	id int IDENTITY(1,1) PRIMARY KEY,
+	userstatus int default 10,
+	username nvarchar(50),
+	createdate datetime  DEFAULT GETDATE(),
+	password nvarchar(50),
+	salt nvarchar(50),
+	iterations int,
+	loginattempts int default 0,
+	lastlogin datetime,
+	lastSucessLogin datetime
+)
+

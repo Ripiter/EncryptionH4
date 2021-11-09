@@ -1,0 +1,20 @@
+﻿alter PROCEDURE SP_CreateUser (@username nvarchar(50),
+                               @password nvarchar(50),
+                               @salt nvarchar(50),
+                               @iterations int)
+AS
+  BEGIN
+	INSERT INTO UserTable(
+					username,
+					password,
+					salt,
+					iterations
+					)
+
+            VALUES  (
+					@username,
+                    @password,
+                    @salt,
+                    @iterations
+					)
+    end

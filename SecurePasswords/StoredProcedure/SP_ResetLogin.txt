@@ -1,0 +1,9 @@
+﻿alter PROCEDURE SP_ResetLogin (@username nvarchar(50))
+AS
+  BEGIN
+		 update UserTable
+		 set userTable.loginattempts = 0,
+		 userTable.lastlogin = getdate()
+		 where userTable.username = @username 
+         select top(1)* from userTable where userTable.username = @username  
+    end

@@ -1,0 +1,15 @@
+﻿USE [SecurePasswordDB]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_ChangeUserStatus]    Script Date: 09/11/2021 11.11.53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[SP_ChangeUserStatus] (@username nvarchar(50), @newstatus int)
+AS
+  BEGIN
+		 update UserTable
+		 set userTable.userstatus = @newstatus
+		 where userTable.username = @username 
+         select top(1)* from userTable where userTable.username = @username  
+    end

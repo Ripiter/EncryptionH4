@@ -1,0 +1,12 @@
+﻿USE [SecurePasswordDB]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_GetUserByUsername]    Script Date: 09/11/2021 12.22.21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[SP_GetUserByUsername] (@username nvarchar(50))
+AS
+  BEGIN
+         select top(1)* from userTable where userTable.username = @username and usertable.userstatus != 90  
+    end

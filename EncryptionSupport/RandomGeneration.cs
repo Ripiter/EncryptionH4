@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EncryptionSupport
 {
-    static class RandomGeneration
+    public static class RandomGeneration
     {
         public static int GenerateRandomNumber(int lenght)
         {
