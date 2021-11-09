@@ -30,8 +30,7 @@ namespace EncryptionH4
                     case "1":
                         computed = Hash.ComputeHashSha256(text.GetBytesUTF8());
                         break;
-                    case "2":
-                        
+                    case "2":                        
                         computed = Hash.ComputeHashMd5(text.GetBytesUTF8());
                         break;
                     case "3":
@@ -40,8 +39,7 @@ namespace EncryptionH4
                         computed = Hmac.ComputeHmacmd5(text.GetBytesUTF8(), hmacMd5Key.GetBytesUTF8());
                         break;
                     case "4":
-                        {                            
-                            text = "Text to encrypt";
+                        {    
                             byte[] key = RandomGeneration.GenerateRandomByteArray(8);
                             byte[] iv = RandomGeneration.GenerateRandomByteArray(8);
 
@@ -50,11 +48,9 @@ namespace EncryptionH4
                             byte[] decrypted = customEncryptor.DecryptDes(computed, key, iv);
                             Console.WriteLine("Decrypted: " + decrypted.GetString());
                         }
-
                         break;
                     case "5":
                         {
-                            text = "Text to encrypt";
                             byte[] key = RandomGeneration.GenerateRandomByteArray(32);
                             byte[] iv = RandomGeneration.GenerateRandomByteArray(16);
 
