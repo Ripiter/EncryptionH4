@@ -52,6 +52,9 @@ namespace EncryptionSupport
             }
         }
 
+        /// <summary>
+        /// For des, triple des and aes 
+        /// </summary>
         private byte[] Encrypt(SymmetricAlgorithm symmetricAlgorithm, byte[] dataToEncrypt, byte[] key, byte[] iv)
         {
             symmetricAlgorithm.Mode = CipherMode.CBC;
@@ -71,6 +74,10 @@ namespace EncryptionSupport
                 return memoryStream.ToArray();
             }
         }
+
+        /// <summary>
+        /// For des, triple des and aes 
+        /// </summary>
         private byte[] Decrypt(SymmetricAlgorithm symmetricAlgorithm, byte[] dataToDecrypt, byte[] key, byte[] iv)
         {
             symmetricAlgorithm.Mode = CipherMode.CBC;
@@ -90,5 +97,7 @@ namespace EncryptionSupport
                 return memoryStream.ToArray();
             }
         }
+
+     
     }
 }

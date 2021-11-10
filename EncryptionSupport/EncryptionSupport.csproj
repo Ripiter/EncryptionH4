@@ -47,6 +47,10 @@
     <Compile Include="Hmac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGeneration.cs" />
+    <Compile Include="RsaEncryptions\RsaEncryption.cs" />
+    <Compile Include="RsaEncryptions\RsaEncryptionContainer.cs" />
+    <Compile Include="RsaEncryptions\RsaEncryptionKey.cs" />
+    <Compile Include="RsaEncryptions\RsaEncryptionXML.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
