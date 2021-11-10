@@ -56,7 +56,6 @@ namespace EncryptionSupport.RSA
 
             rsa.PersistKeyInCsp = false;
             rsa.FromXmlString(File.ReadAllText(publicKeyPath));
-
             cipherbytes = rsa.Encrypt(dataToEncrypt, false);
 
             return cipherbytes;

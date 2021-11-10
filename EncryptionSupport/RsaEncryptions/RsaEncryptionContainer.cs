@@ -16,6 +16,11 @@ namespace EncryptionSupport.RSA
             ContainerName = _containerName;
         }
 
+        ~RsaEncryptionContainer()
+        {
+            DeleteKeyInCsp();
+        }
+
         public override void AssignNewKey()
         {
             CspParameters cspParams = new CspParameters(1);
